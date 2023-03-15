@@ -1,0 +1,116 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*+
+ * 0.1 Variables
+ *------------------------------------------------------------
++*/
+
+:root {
+    /** Primary colors */ 
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /** Neutral color */
+    --Dark-gray: hsl(0, 0%, 59%);
+
+    /** Typography */
+    --size-typography: 18px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("images/bg-pattern-top.svg") top -500px left -200px no-repeat, url("images/bg-pattern-bottom.svg") bottom -600px right -150px no-repeat;
+    background-color: var(--Dark-cyan);
+}
+
+.card__container {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
+
+.card-header {
+    width: 100%;
+    height: 140px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body p {
+    margin-top: -2rem;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.card-body p span {
+    color: var(--Dark-gray);
+}
+
+.card-body h3 {
+    color: var(--Dark-gray);
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0 2rem 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transform: translateY(-50%);
+}
+
+.card-footer .social-media-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem 2.5rem;
+    text-align: center;
+}
+
+.social-media-info h2 {
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.social-media-info p {
+    color: var(--Dark-gray);
+    font-size: 14px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 380px) {
+    .card__container {
+        max-width: 90%;
+    }
+}
